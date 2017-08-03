@@ -23,12 +23,13 @@
           </div>
         <% end %>
       </div>
-      <div class="col-4 slogan">
+      <div class="col col-sm-4 hidden-xs-down slogan">
         Splurting out somebody's idea of comedy since 2017
       </div>
-      <div class="col-5 links">
+      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
         <!-- Button trigger modal -->
-        <%= link_to 'Add a Quote', '#', data: {toggle: 'modal', target: '#myModal'}, class: 'add-quote' %>
+        <%= link_to 'Add a TV Quote', '#', data: {toggle: 'modal', target: '#myModal'} %>
+        &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
     </header>
@@ -47,12 +48,13 @@
           </div>
           <%= simple_form_for Quote.new do |f| %>
             <div class="modal-body">
-              <%= f.input :saying %>
-              <%= f.input :author %>
+              <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Me fail English? That's unpossible!" %>
+              <br />
+              <%= f.input :author, label: "Who is the author of the quote?", placeholder: "Ralph Wiggum" %>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <%= f.submit 'Create', class: 'btn btn-danger' %>
+              <%= f.submit 'Add', class: 'btn btn-danger' %>
             </div>
           <% end %>
         </div>
@@ -75,10 +77,10 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
-          <div class="col-6 footer-blurb">
+          <div class="col-12 col-sm-6 footer-blurb">
             Proudly built by <a target="_blank" href="http://jaredschilling.getforge.io/">Jared Schilling</a>
           </div>
         </div>
