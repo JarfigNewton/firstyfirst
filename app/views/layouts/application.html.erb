@@ -27,8 +27,8 @@
         Splurting out somebody's idea of comedy since 2017
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', new_quote_path %>
-        <%= link_to 'About', '#' %>
+        <%= link_to 'Add a Quote', new_quote_path, class: 'add-quote' %>
+        <%= link_to 'About', about_path %>
       </div>
     </header>
 
@@ -52,7 +52,7 @@
             <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
-            Proudly built by <a href="http://jaredschilling.getforge.io/">Jared Schilling</a>
+            Proudly built by <a target="_blank" href="http://jaredschilling.getforge.io/">Jared Schilling</a>
           </div>
         </div>
       </div>
